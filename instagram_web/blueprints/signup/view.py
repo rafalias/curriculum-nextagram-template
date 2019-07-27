@@ -36,7 +36,7 @@ def create_signup():
 
     name.save()
     # return redirect(url_for('home'))
-    return render_template("home.html")
+    return render_template("my_profile.html")
     # return f'signin'
 
   
