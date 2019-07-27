@@ -20,19 +20,19 @@
   <div class="col">
       <h2> {{user.username}} </h2>
 
-      {% if follows == current_user.following() %}
+     
       <form action="{{url_for('follow', username=user.username)}}" method="POST">
           <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
           <input class="btn btn-primary" type="submit" value="Follow"/>
       </form>
-      {% else %}
+ 
       <img src="https://i0.wp.com/thumbs.dreamstime.com/b/tick-like-button-blue-108617940.jpg?w=600" alt="" height="40px" width="40px" class="border border-dark rounded-circle"><br>
-      {% endif %}
+     
        
       <span>Follower: {{user.followers()|length}}</span><br>
       <span>Following: {{user.following()|length}}</span>
   </div>
-</div><br><br><br>
+</div><br><br><br>+++
 
   <div class="row" style="justify-content: center">
       <h2>~~The Post~~</h2>
