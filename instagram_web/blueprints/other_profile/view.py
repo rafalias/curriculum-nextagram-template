@@ -23,7 +23,7 @@ def kkk():
     
 @app.route("/<username>", methods=["POST", "GET"])
 def follow(username):
-  
+    breakpoint()
     x = User.get_or_none(User.username == username)
     my_idols = User.select().join(Follows, on=(User.id == Follows.myidol_id)).where(Follows.myfan_id == current_user.id)
 
