@@ -20,13 +20,12 @@
   <div class="col">
       <h2> {{user.username}} </h2>
 
-     
       <form action="{{url_for('follow', username=user.username)}}" method="POST">
           <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
           <input class="btn btn-primary" type="submit" value="Follow"/>
       </form>
  
-      <img src="https://i0.wp.com/thumbs.dreamstime.com/b/tick-like-button-blue-108617940.jpg?w=600" alt="" height="40px" width="40px" class="border border-dark rounded-circle"><br>
+      <!-- <img src="https://i0.wp.com/thumbs.dreamstime.com/b/tick-like-button-blue-108617940.jpg?w=600" alt="" height="40px" width="40px" class="border border-dark rounded-circle"><br> -->
      
        
       <span>Follower: {{user.followers()|length}}</span><br>
