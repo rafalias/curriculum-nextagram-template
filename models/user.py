@@ -19,7 +19,7 @@ class User(BaseModel, UserMixin):
     def followers(self):
         return User.select().join(Follows, on=Follows.myfan).where(Follows.myidol == self)
 
-    def following(self):
+    def following(self): 
         return User.select().join(Follows, on=Follows.myidol).where(Follows.myfan == self)
 
 
